@@ -155,9 +155,10 @@ section {
   color: white;
   text-align: center;
   outline: 8px inset #ccc;
+  margin-top: 50px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 780px) {
   .logo > div > img {
     width: 140px;
   }
@@ -165,7 +166,7 @@ section {
   .radio-level-0 + label,
   .radio-level-1 + label {
     display: inline-block;
-    width: 75px;
+    width: 65px;
     margin-left: 0px;
     margin-bottom: 7px;
     white-space: normal;
