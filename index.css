@@ -52,7 +52,7 @@ label {
   outline: 3px inset #ccc;
 }
 .radio-level-0 + label:hover {
-  background-color: #ccc;
+  outline: 3px solid #928d93;
 }
 
 
@@ -76,7 +76,7 @@ label {
   outline: 3px inset #e96160;
 }
 .radio-level-1 + label:hover {
-  background-color: #ccc;
+  outline: 3px solid #928d93;
 }
 
 section {
@@ -110,7 +110,9 @@ section {
 #radio-contact-address:checked ~ #content-contact-address,
 #radio-contact-phone:checked ~ #content-contact-phone,
 #radio-contact-sms:checked ~ #content-contact-sms,
-#radio-contact-email:checked ~ #content-contact-email {
+#radio-contact-email:checked ~ #content-contact-email,
+
+#radio-content-about:checked ~ #content-about-about {
   display: block;
 }
 
@@ -137,4 +139,46 @@ section {
 }
 #content-contact {
   color: #eae5eb;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-image: linear-gradient(#000, #300);
+  color: white;
+  text-align: center;
+  outline: 8px inset #ccc;
+}
+
+@media (max-width: 500px) {
+  .logo > div > img {
+    width: 140px;
+  }
+
+  .radio-level-0 + label,
+  .radio-level-1 + label {
+    display: inline-block;
+    width: 75px;
+    margin-left: 0px;
+    margin-bottom: 7px;
+    white-space: normal;
+    font-size: x-small;
+    vertical-align: top;
+    word-break: break-word;
+  }
+
+  .radio-level-0 + label {
+    width: 104px;
+  }
+
+  .radio-level-0 + label ~ section,
+  .radio-level-1 + label ~ section {
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 340px;
+  }
 }
