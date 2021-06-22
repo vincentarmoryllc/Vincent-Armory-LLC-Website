@@ -6,6 +6,7 @@ body {
   background-position: top right;
   background-attachment: fixed;
   border: 0px;
+  width: 100%;
 }
 
 a {
