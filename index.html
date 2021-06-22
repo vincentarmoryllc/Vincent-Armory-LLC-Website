@@ -7,7 +7,7 @@
 
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
     <meta name=viewport content='width=device-width, initial-scale=1'>
-    <meta name='description' content='Free Web tutorials'>
+    <meta name='description' content='Firearms services'>
     <meta name='keywords' content='firearm, firearms, gun, guns'>
     <meta name='author' content='Alan Lovitt, https://github.com/AlanDSaster'>
 
@@ -24,19 +24,74 @@
 
     <br>
 
-    <input id='nav-button-services' type='checkbox' class='nav-button' checked>
-    <label for='nav-button-services'>Services</label>
+    <input name='topLevel' id='radio-topLevel-services' type='radio' checked />
+    <label name='topLevel' for='radio-topLevel-services'>
+      Services
+    </label>
 
-    <input id='nav-button-about' type='checkbox' class='nav-button' checked>
-    <label for='nav-button-about'>About</label>
+    <input name='topLevel' id='radio-topLevel-about' type='radio' />
+    <label name='topLevel' for='radio-topLevel-about'>
+      About
+    </label>
 
-    <input id='nav-button-contact' type='checkbox' class='nav-button' checked>
-    <label for='nav-button-contact'>Contact</label>
+    <input name='topLevel' id='radio-topLevel-contact' type='radio' />
+    <label name='topLevel' for='radio-topLevel-contact'>
+      Contact
+    </label>
 
+    <br>
+    <br>
 
     <section id='content-services'>
-      <h2>Services</h2>
-      
+
+      <input name='services' id='radio-services-fflTransfers' type='radio' checked />
+      <label for='radio-services-fflTransfers' href='#services-content'>
+        <h3>FFL Transfers</h3>
+        <div>
+          <p>Need a firearm transferred?</p>
+          <p>Contact us to let us know what you need!</p>
+          <p>Transfers start at $30.</p>
+          <p>with multi-gun, Law Enforcement, and Military discounts available.</p>
+        </div>
+      </label>
+
+      <input name='services' id='radio-services-customization' type='radio' checked />
+      <label for='radio-services-customization' onclick='window.location.href="#services-content";'>
+        <h3>Firearms Customization</h3>
+        <div>
+          <p>...</p>
+        </div>
+      </label>
+
+      <input name='services' id='radio-services-gunsmithingPackages' type='radio' />
+      <label for='radio-services-gunsmithingPackages' onclick='window.location.href="#services-content";'>
+        <h3>Gunsmithing Packages</h2>
+        <div>
+          <p>Send us your Glock or Sig P320 to be outfitted with any of our custom gunsmithing options selected by you.</p>
+          <p>Additional gunsmithing options are on the way!</p>
+        </div>
+      </label>
+
+      <input name='services' id='radio-services-firearmsSales' type='radio' />
+      <label for='radio-services-firearmsSales' onclick='window.location.href="#services-content";'>
+        <h3>Firearms Sales</h3>
+        <div>
+          <p>Vincent Armor is proud to announce that we will soon have our own brand of firearms hitting the market.</p>
+          <p>Glock, AR, M1, 1911, and 2011 platforms are all in pre-production.</p>
+        </div>
+      </label>
+
+
+      <div id='services-content'>
+        <section id='content-fflTransfers'>
+          <h4>FFL Transfers</h4>
+          <p>This is the section for FFL Transfers</p>
+        </section>
+      </div>
+
+
+
+
     </section>
 
     <section id='content-about'>

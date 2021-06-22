@@ -1,0 +1,165 @@
+/* background */
+
+body {
+  background-color: #0a0a0a;
+  background-image: url('./img/vincent armory llc background image.jpg');
+  background-repeat: no-repeat;
+  background-size: auto, 100%;
+  background-position: top right;
+  background-attachment: fixed;
+  border: 0px;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-variant: small-caps;
+}
+
+/* logo */
+
+#logo {
+  display: inline-block;
+  width: 140px;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+#logo + h1 {
+  display: inline-block;
+  color: #eae5eb;
+}
+
+section {
+  display: none;
+  color: #eae5eb;
+}
+
+/* top level */
+
+#radio-topLevel-services,
+#radio-topLevel-about,
+#radio-topLevel-contact {
+  display: inline-block;
+  position: absolute;
+  left: -9999px;
+  vertical-align: top;
+}
+
+#radio-topLevel-services + label,
+#radio-topLevel-about + label,
+#radio-topLevel-contact + label {
+  font-variant: small-caps;
+}
+
+#radio-topLevel-services:checked + label,
+#radio-topLevel-about:checked + label,
+#radio-topLevel-contact:checked + label {
+  background-color: #fff;
+  outline: 3px inset #ccc;
+}
+
+#radio-topLevel-services + label,
+#radio-topLevel-about + label,
+#radio-topLevel-contact + label {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #eee;
+  padding: 15px;
+  border: 4px outset black;
+  width: 300px;
+  height: 18px;
+  text-align: center;
+  background-image: linear-gradient(#928d93, #eae5eb);
+}
+
+#radio-topLevel-services:checked + label,
+#radio-topLevel-about:checked + label,
+#radio-topLevel-contact:checked + label {
+  background-color: #ccc;
+}
+
+#radio-topLevel-services + label:hover,
+#radio-topLevel-about + label:hover,
+#radio-topLevel-contact + label:hover {
+  outline: 3px inset #ccc;
+}
+
+/* second level */
+
+#content-services,
+#content-about,
+#content-contact {
+  display: none;
+}
+
+#radio-topLevel-services:checked ~ #content-services,
+#radio-topLevel-about:checked ~ #content-about,
+#radio-topLevel-contact:checked ~ #content-contact {
+  display: inline-block;
+  height: auto;
+}
+
+#content-services > input[type='radio'] {
+  position: absolute;
+  left: -9999px;
+}
+#content-services > label {
+  display: inline-block;
+  vertical-align: top;
+  width: 17%;
+  height: 300px;
+  padding: 0px;
+  margin-right: 27px;
+}
+
+#radio-services-fflTransfers + label,
+#radio-services-customization + label,
+#radio-services-gunsmithingPackages + label,
+#radio-services-firearmsSales + label {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 3px outset #ccc;
+  background-image: linear-gradient(#730202, #e90100);
+}
+#radio-services-fflTransfers + label:hover,
+#radio-services-customization + label:hover,
+#radio-services-gunsmithingPackages + label:hover,
+#radio-services-firearmsSales + label:hover {
+  outline: 3px inset #ccc;
+}
+#radio-services-fflTransfers:checked + label,
+#radio-services-customization:checked + label,
+#radio-services-gunsmithingPackages:checked + label,
+#radio-services-firearmsSales:checked + label {
+  outline: 3px outset #ccc;
+}
+
+
+#radio-services-fflTransfers + label > div,
+#radio-services-customization + label > div,
+#radio-services-gunsmithingPackages + label > div,
+#radio-services-firearmsSales + label > div {
+  display: block;
+  padding: 3px;
+}
+
+#radio-services-fflTransfers + label > h3,
+#radio-services-customization + label > h3,
+#radio-services-gunsmithingPackages + label > h3,
+#radio-services-firearmsSales + label > h3 {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  background-image: linear-gradient(#928d93, #eae5eb);
+  color: black;
+  margin: 0px;
+  text-align: center;
+}
+
+/* third level */
+#radio-services-fflTransfers:checked ~ div > #content-fflTransfers {
+  display: none;
+}
+#radio-services-fflTransfers:checked ~ div > #content-fflTransfers {
+  display: block;
+}
