@@ -1,165 +1,132 @@
-/* background */
-
 body {
   background-color: #0a0a0a;
   background-image: url('./img/vincent armory llc background image.jpg');
   background-repeat: no-repeat;
-  background-size: auto, 100%;
+  background-size: 40%, auto;
   background-position: top right;
   background-attachment: fixed;
   border: 0px;
-
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-variant: small-caps;
+.logo {
+  display: block;
 }
-
-/* logo */
-
-#logo {
+.logo > div {
+}
+.logo > div > img {
   display: inline-block;
-  width: 140px;
+  width: 10%;
+}
+.logo > div > h1,
+.logo > div > h2 {
+  color: #fff;
   vertical-align: top;
-  margin-bottom: 15px;
+  text-align: left;
 }
-#logo + h1 {
+
+
+
+.radio-level-0 {
   display: inline-block;
+  position: absolute;
+  left: -9999px;
+}
+.radio-level-0 + label {
+  display: inline-block;
+  background-color: #fff;
+  outline: 3px outset #ccc;
+  padding: 3px;
+  width: 120px;
+  background-image: linear-gradient(#928d93, #eae5eb);
+  margin-bottom: 10px;
+}
+.radio-level-0:checked + label {
+  background-color: #ccc;
+  outline: 3px inset #ccc;
+}
+.radio-level-0 + label:hover {
+  background-color: #ccc;
+}
+
+
+
+.radio-level-1 {
+  display: inline-block;
+  position: absolute;
+  left: -9999px;
+}
+.radio-level-1 + label {
+  display: inline-block;
+  outline: 3px outset #730202;
+  padding: 3px;
+  width: 200px;
+  background-image: linear-gradient(#730202, #e90100);
   color: #eae5eb;
+  white-space: nowrap;
+}
+.radio-level-1:checked + label {
+  background-color: #ccc;
+  outline: 3px inset #e96160;
+}
+.radio-level-1 + label:hover {
+  background-color: #ccc;
 }
 
 section {
   display: none;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.radio-level-0 ~ section {
+}
+.radio-level-1 ~ section {
+  color: #eae5eb;
+  background-color: #111;
+  outline: #333 inset 3px;
+  width: 822px;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+#radio-level-0-services:checked ~ #content-services,
+#radio-level-0-about:checked ~ #content-about,
+#radio-level-0-contact:checked ~ #content-contact,
+
+#radio-services-transfers:checked ~ #content-services-transfers,
+#radio-services-customization:checked ~ #content-services-customization,
+#radio-services-gunsmithingPackages:checked ~ #content-services-gunsmithingPackages,
+#radio-services-sales:checked ~ #content-services-sales,
+
+#radio-contact-address:checked ~ #content-contact-address,
+#radio-contact-phone:checked ~ #content-contact-phone,
+#radio-contact-sms:checked ~ #content-contact-sms,
+#radio-contact-email:checked ~ #content-contact-email {
+  display: block;
+}
+
+#content-services-gunsmithingPackages > div,
+#content-services-customization > div {
+  border-bottom: 1px solid #e96160;
+  padding: 5px;
+}
+#content-services-gunsmithingPackages > div:hover,
+#content-services-customization > div:hover {
+  outline: 3px inset #ccc;
+  background-color: #730202;
+}
+#content-services-gunsmithingPackages > div > span,
+#content-services-customization > div > span {
+  display: block;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #e96160;
+}
+
+#content-about {
   color: #eae5eb;
 }
-
-/* top level */
-
-#radio-topLevel-services,
-#radio-topLevel-about,
-#radio-topLevel-contact {
-  display: inline-block;
-  position: absolute;
-  left: -9999px;
-  vertical-align: top;
-}
-
-#radio-topLevel-services + label,
-#radio-topLevel-about + label,
-#radio-topLevel-contact + label {
-  font-variant: small-caps;
-}
-
-#radio-topLevel-services:checked + label,
-#radio-topLevel-about:checked + label,
-#radio-topLevel-contact:checked + label {
-  background-color: #fff;
-  outline: 3px inset #ccc;
-}
-
-#radio-topLevel-services + label,
-#radio-topLevel-about + label,
-#radio-topLevel-contact + label {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #eee;
-  padding: 15px;
-  border: 4px outset black;
-  width: 300px;
-  height: 18px;
-  text-align: center;
-  background-image: linear-gradient(#928d93, #eae5eb);
-}
-
-#radio-topLevel-services:checked + label,
-#radio-topLevel-about:checked + label,
-#radio-topLevel-contact:checked + label {
-  background-color: #ccc;
-}
-
-#radio-topLevel-services + label:hover,
-#radio-topLevel-about + label:hover,
-#radio-topLevel-contact + label:hover {
-  outline: 3px inset #ccc;
-}
-
-/* second level */
-
-#content-services,
-#content-about,
 #content-contact {
-  display: none;
-}
-
-#radio-topLevel-services:checked ~ #content-services,
-#radio-topLevel-about:checked ~ #content-about,
-#radio-topLevel-contact:checked ~ #content-contact {
-  display: inline-block;
-  height: auto;
-}
-
-#content-services > input[type='radio'] {
-  position: absolute;
-  left: -9999px;
-}
-#content-services > label {
-  display: inline-block;
-  vertical-align: top;
-  width: 17%;
-  height: 300px;
-  padding: 0px;
-  margin-right: 27px;
-}
-
-#radio-services-fflTransfers + label,
-#radio-services-customization + label,
-#radio-services-gunsmithingPackages + label,
-#radio-services-firearmsSales + label {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  border: 3px outset #ccc;
-  background-image: linear-gradient(#730202, #e90100);
-}
-#radio-services-fflTransfers + label:hover,
-#radio-services-customization + label:hover,
-#radio-services-gunsmithingPackages + label:hover,
-#radio-services-firearmsSales + label:hover {
-  outline: 3px inset #ccc;
-}
-#radio-services-fflTransfers:checked + label,
-#radio-services-customization:checked + label,
-#radio-services-gunsmithingPackages:checked + label,
-#radio-services-firearmsSales:checked + label {
-  outline: 3px outset #ccc;
-}
-
-
-#radio-services-fflTransfers + label > div,
-#radio-services-customization + label > div,
-#radio-services-gunsmithingPackages + label > div,
-#radio-services-firearmsSales + label > div {
-  display: block;
-  padding: 3px;
-}
-
-#radio-services-fflTransfers + label > h3,
-#radio-services-customization + label > h3,
-#radio-services-gunsmithingPackages + label > h3,
-#radio-services-firearmsSales + label > h3 {
-  display: inline-block;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-  background-image: linear-gradient(#928d93, #eae5eb);
-  color: black;
-  margin: 0px;
-  text-align: center;
-}
-
-/* third level */
-#radio-services-fflTransfers:checked ~ div > #content-fflTransfers {
-  display: none;
-}
-#radio-services-fflTransfers:checked ~ div > #content-fflTransfers {
-  display: block;
+  color: #eae5eb;
 }

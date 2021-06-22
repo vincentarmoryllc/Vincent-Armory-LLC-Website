@@ -19,138 +19,152 @@
 
 
   <body>
-    <img id='logo' src='./img/vincent armory llc logo without background.png' alt='Vincent Armory LLC Logo'/>
-    <h1>&quot;Big Guns Keep the Peace&quot;</h1>
 
-    <br>
+    <div class='logo'>
+      <div>
+        <img id='logo' src='./img/vincent armory llc logo without background.png' alt='Vincent Armory LLC Logo'/>
+      </div>
+      <div>
+        <h1>Vincent Armory LLC</h1>
+        <h2>&quot;Big Guns Keep the Peace&quot;</h2>
+      </div>
+    </div>
 
-    <input name='topLevel' id='radio-topLevel-services' type='radio' checked />
-    <label name='topLevel' for='radio-topLevel-services'>
+    <input name='level-0' id='radio-level-0-services' class='radio-level-0' type='radio' checked />
+    <label for='radio-level-0-services'>
       Services
     </label>
 
-    <input name='topLevel' id='radio-topLevel-about' type='radio' />
-    <label name='topLevel' for='radio-topLevel-about'>
+    <input name='level-0' id='radio-level-0-about' class='radio-level-0'  type='radio' />
+    <label for='radio-level-0-about'>
       About
     </label>
 
-    <input name='topLevel' id='radio-topLevel-contact' type='radio' />
-    <label name='topLevel' for='radio-topLevel-contact'>
+    <input name='level-0' id='radio-level-0-contact' class='radio-level-0' type='radio' />
+    <label for='radio-level-0-contact'>
       Contact
     </label>
 
-    <br>
-    <br>
+
+
+
 
     <section id='content-services'>
 
-      <input name='services' id='radio-services-fflTransfers' type='radio' checked />
-      <label for='radio-services-fflTransfers' href='#services-content'>
-        <h3>FFL Transfers</h3>
-        <div>
-          <p>Need a firearm transferred?</p>
-          <p>Contact us to let us know what you need!</p>
-          <p>Transfers start at $30.</p>
-          <p>with multi-gun, Law Enforcement, and Military discounts available.</p>
-        </div>
+      <input name='radio-services' id='radio-services-transfers' class='radio-level-1' type='radio' checked />
+      <label for='radio-services-transfers'>
+        FFL Transfers
       </label>
 
-      <input name='services' id='radio-services-customization' type='radio' checked />
-      <label for='radio-services-customization' onclick='window.location.href="#services-content";'>
-        <h3>Firearms Customization</h3>
-        <div>
-          <p>...</p>
-        </div>
+      <input name='radio-services' id='radio-services-customization' class='radio-level-1' type='radio' checked />
+      <label for='radio-services-customization'>
+        Customization
       </label>
 
-      <input name='services' id='radio-services-gunsmithingPackages' type='radio' />
-      <label for='radio-services-gunsmithingPackages' onclick='window.location.href="#services-content";'>
-        <h3>Gunsmithing Packages</h2>
-        <div>
-          <p>Send us your Glock or Sig P320 to be outfitted with any of our custom gunsmithing options selected by you.</p>
-          <p>Additional gunsmithing options are on the way!</p>
-        </div>
+      <input name='radio-services' id='radio-services-gunsmithingPackages' class='radio-level-1' type='radio' />
+      <label for='radio-services-gunsmithingPackages'>
+        Gunsmithing Packages
       </label>
 
-      <input name='services' id='radio-services-firearmsSales' type='radio' />
-      <label for='radio-services-firearmsSales' onclick='window.location.href="#services-content";'>
-        <h3>Firearms Sales</h3>
-        <div>
-          <p>Vincent Armor is proud to announce that we will soon have our own brand of firearms hitting the market.</p>
-          <p>Glock, AR, M1, 1911, and 2011 platforms are all in pre-production.</p>
-        </div>
+      <input name='radio-services' id='radio-services-sales' class='radio-level-1' type='radio' />
+      <label for='radio-services-sales'>
+        Firearms Sales
       </label>
 
+      <section id='content-services-transfers'>
+        <p>Need a firearm transferred?</p>
+        <p>Contact us to let us know what you need!</p>
+        <p>Transfers start at $30.</p>
+        <p>with multi-gun, Law Enforcement, and Military discounts available.</p>
+      </section>
 
-      <div id='services-content'>
-        <section id='content-fflTransfers'>
-          <h4>FFL Transfers</h4>
-          <p>This is the section for FFL Transfers</p>
-        </section>
-      </div>
+      <section id='content-services-customization'>
 
+        <div>
+          <span>Basic Stipple Package: $75</span>
+          We will hand stipple both sides of your firearm. Great for Everyday Carry or Casual Shooting!
+        </div>
+        <div>
+          <span>Ready To Go Stipple Package: $125</span>
+          We will hand stipple both sides of the handle, the back strap, and finger groove portion of your firearm. This is perfect for Casual Shooting, Everyday Carry, or Service Carry!
+        </div>
+        <div>
+          <span>Tight Grip Stipple Package: $175</span>
+          We will hand stipple both sides of your firearm, the back strap, finger groove portion, under and infront of the trigger gaurd. Great for Service Carry, and Compitition guns!
+        </div>
+        <div>
+          <span>Full Stipple Mode: $300</span>
+          We will hand stipple your firearm for any possible way that it can be gripped. Including High side stipple, Thumb shelves, Undercuts, and Accelerator cuts! This stipple package is best for Competition guns!
+        </div>
+      </section>
 
+      <section id='content-services-gunsmithingPackages'>
+        <div>
+          <span>Under cutting: $45-$155</span>
+          Single undercutting, Double Undercutting and Accelerator cuts. (Accelerator cuts Glock only)
+        </div>
+        <div>
+          <span>Glock Frame Chop: $125, Magwell Capable +$50</span>
+          Make your full size Glock frame more concealable or fit your hand better by cutting the handle down to compact size. (example: Takes Glock 17 handle down to Glock 19 size)
+        </div>
+      </section>
 
-
+      <section id='content-services-sales'>
+        <div>
+          <p>Vincent Armory brand firearms are coming soon.</p>
+          <p>Check out our selection of used firearms on <a href='https://www.gunbroker.com'>Gunbroker.com</a></p>
+        </div>
+      </section>
     </section>
 
     <section id='content-about'>
-      about
+      <p>Vincent Armory LLC is a family operated business located in Michigan dedicated to all things firearms.</p>
+      <p>We offer a variety of services including sales, transfers, gunsmithing, to manufacturing.</p>
     </section>
 
     <section id='content-contact'>
-      contact us
+
+      <input name='radio-contact' id='radio-contact-address' class='radio-level-1' type='radio' checked />
+      <label for='radio-contact-address'>
+        Address
+      </label>
+      <input name='radio-contact' id='radio-contact-phone' class='radio-level-1' type='radio' />
+      <label for='radio-contact-phone'>
+        Phone
+      </label>
+      <input name='radio-contact' id='radio-contact-text' class='radio-level-1' type='radio' />
+      <label for='radio-contact-text'>
+        SMS / Text
+      </label>
+      <input name='radio-contact' id='radio-contact-email' class='radio-level-1' type='radio' />
+      <label for='radio-contact-email'>
+        Email
+      </label>
+
+
+
+      <section id='content-contact-address'>
+        <p>811 Abrey Ave</p>
+        <p>Owosso, MI 48867</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.531509992327!2d-84.15544584865087!3d42.988141503094454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88230702c79cadc1%3A0xe5a6b346ccc2fdf5!2s811%20Abrey%20Ave%2C%20Owosso%2C%20MI%2048867!5e0!3m2!1sen!2sus!4v1624032532001!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+      <section id='content-contact-phone'>
+        <a href='tel:1-989-277-5562'>1-989-277-5562</a>
+      </section>
+
+      <section id='content-contact-sms'>
+        <a href='sms:+19892775562&body=message'>1-989-277-5562</a>
+      </section>
+
+      <section id='content-contact-email'>
+        <a href='mailto:vincentarmoryllc@email.com'>vincentarmoryllc@email.com</a>
+      </section>
     </section>
-  </nav>
 
-  <div><!-- details -->
 
-  </div>
 
-  <div> <!-- extended details -->
 
-  </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  </body>
 </html>
